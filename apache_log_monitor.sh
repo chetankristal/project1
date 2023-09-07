@@ -47,6 +47,8 @@ sending_mail()
 		then
 			echo "errors are more than 100, send email"
 			cat error.txt | mail -s "more number of error in apache" $1
+		#	cat error.txt | mailx -v -r "chetan11may@gmail.com" -s "more number of error in apache"  -S smtp="email-smtp.ap-southeast-1.amazonaws.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="<>" -S smtp-auth-password="<>" -S nss-config-dir=/etc/pki/nssdb/ -S ssl-verify=ignore chetan11may@gmail.com
+
 	fi
 }
 
