@@ -2,7 +2,7 @@
 
 read -p "do you want to add the apache log monitor  scripts in crontab to execute every hour , ans should be in yes or no [yes/no]:  " value
 
-folder_name=./
+folder_name=.
 
 read_variable()
 {
@@ -23,7 +23,7 @@ then
 	crontab -l > crontab_new
 	chmod +x $folder_name/apache_log_monitor.sh
 	grep apache_log_monitor.sh crontab_new
-	if [[ $? == 0 ]]
+	if [[ $? != 0 ]]
 	then
 		echo "0 */1 * * * $folder_name/apache_log_monitor.sh $file_name $email " >> crontab_new
 		crontab crontab_new

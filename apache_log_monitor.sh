@@ -11,7 +11,7 @@ else
 fi
 
 
-log_directory=./
+log_directory=.
 file_name=$1
 email_id=$2
 
@@ -32,11 +32,11 @@ number_of_failure()
 	number_0f_4xx=`grep -iR 'HTTP/1.[0-1]\" 4[0-9][0-9]' "$1"/$2 |wc -l`
 
 	cum_error=$(expr $number_0f_4xx + $number_0f_5xx)
+        echo cummalative error are $cum_error >error.txt
+        echo number_0f_5xx is $number_0f_5xx >>error.txt
+        echo number_0f_4xx is $number_0f_4xx >>error.txt
 
 	return $cum_error
-	echo cummalative error are $cum_error>error.txt
-	echo number_0f_5xx is $number_0f_5xx>>error.txt
-	echo number_0f_4xx is $number_0f_4xx>>error.txt
 
 }
 
@@ -46,7 +46,7 @@ sending_mail()
 	if [ $cum_error >100 ]
 		then
 			echo "errors are more than 100, send email"
-			cat hello.txt | mail -s "more number of error in apache" $1
+			cat error.txt | mail -s "more number of error in apache" $1
 	fi
 }
 
