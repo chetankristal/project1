@@ -5,9 +5,8 @@ Creating this repo with an intent to make Kubernetes easy for begineers. This is
 Instructions on running the scripts for the task 
 
     checkout the gihub code:-
-    ```
     git clone https://github.com/chetankristal/project1.git
-    ```
+    
 
 There are mainly two scripts
   1) apache_log_monitor.sh
@@ -26,6 +25,7 @@ Solution:- We will examine recent log patterns to investigate whether there has 
 
 For the immediate fix, I will utilize the 'find' command to identify files older than 90 days, or maybe less. Subsequently, I will upload these files to S3 and promptly remove them from the server.
             
-• Audit requirements dictate that logs are to be kept for at least 7 years • The machine is currently storing 6 months’ worth of logs, and would run out of  storage within the week. Increasing storage is not an option within the next 12  months  
-    Solution:- Now I will use the logrotate utility to implement and manage log files by rotating and compressing them, will keep the log of 90 days on the server and older logs can be uploaded in S3 and we will apply a lifecycle policy to transition logs to Amazon S3 Glacier for long-term storage and Any logs that are older than 7 years will be subject to deletion.
+• Audit requirements dictate that logs are to be kept for at least 7 years • The machine is currently storing 6 months’ worth of logs, and would run out of  storage within the week. Increasing storage is not an option within the next 12 months  
+
+Solution:- Now I will use the logrotate utility to implement and manage log files by rotating and compressing them, will keep the log of 90 days on the server and older logs can be uploaded in S3 and we will apply a lifecycle policy to transition logs to Amazon S3 Glacier for long-term storage and Any logs that are older than 7 years will be subject to deletion.
 
