@@ -28,13 +28,20 @@ number_of_failure()
 	fi
 
 	#checking the number of failure 4XX and 5XX
-	number_0f_5xx=`grep -iR 'HTTP/1.[0-1]\" 5[0-9][0-9]' "$1"/$2 |wc -l`
-	number_0f_4xx=`grep -iR 'HTTP/1.[0-1]\" 4[0-9][0-9]' "$1"/$2 |wc -l`
+	grep -iR 'HTTP/1.[0-1]\" 5[0-9][0-9]' "$1"/$2 >5xx_error.log
+	grep -iR 'HTTP/1.[0-1]\" 4[0-9][0-9]' "$1"/$2 >4xx_error.log
+
+
+	number_0f_5xx=`wc -l 5xx_error.log | cut -d " " -f1`
+	number_0f_4xx=`wc -l 4xx_error.log | cut -d " " -f1`
+	
+	sed h 5xx_error.log 4xx_error.log>error.log
 
 	cum_error=$(expr $number_0f_4xx + $number_0f_5xx)
-        echo cummalative error are $cum_error >error.txt
-        echo number_0f_5xx is $number_0f_5xx >>error.txt
-        echo number_0f_4xx is $number_0f_4xx >>error.txt
+        echo Cummalative error are $cum_error >error_details.txt
+        echo Number_0f_5xx is $number_0f_5xx >>error_details.txt
+        echo Number_0f_4xx is $number_0f_4xx >>error_details.txt
+	echo "For more details, please check the attached log file." >>error_details.txt
 
 	return $cum_error
 
@@ -46,7 +53,8 @@ sending_mail()
 	if [ $cum_error >100 ]
 		then
 			echo "errors are more than 100, send email"
-			cat error.txt | mail -s "more number of error in apache" $1
+		#	cat error.txt | mail -s "more number of error in apache" $1
+			cat error_details.txt | mutt -s "More number of error in apache" -a error.log -- chetan.anandlove@gmail.com
 		#	cat error.txt | mailx -v -r "chetan11may@gmail.com" -s "more number of error in apache"  -S smtp="email-smtp.ap-southeast-1.amazonaws.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="<>" -S smtp-auth-password="<>" -S nss-config-dir=/etc/pki/nssdb/ -S ssl-verify=ignore chetan11may@gmail.com
 
 	fi
