@@ -1,24 +1,20 @@
 #!/bin/bash
 
-read -p "do you want to add the apache log monitor  scripts in crontab to execute every hour , ans should be in yes or no [yes/no]:  " value
+read -p "Would you like to schedule the Apache log monitoring scripts to run hourly in crontab? (yes/no) If you choose "no," they will run once and provide the output.:" value
 
-folder_name=.
+folder_name=`pwd`
 
 read_variable()
 {
         read -p "enter the log file name:" log_file_name
         file_name=$log_file_name
         read -p "enter the email id:" email_id
-        email=$email_id
+        email="$email_id"
 }
 
 
 if [[ "$value" == "yes" ]]
 then
-#	read -p "enter the log file name:" log_file_name
-#	file_name=$log_file_name
-#	read -p "enter the email id:" email_id
-#	email=$email_id
 	read_variable
 	crontab -l > crontab_new
 	chmod +x $folder_name/apache_log_monitor.sh
@@ -37,10 +33,6 @@ then
 elif [[ "$value" == "no" ]]
 then	
         
-#	read -p "enter the log file name:" log_file_name
-#        file_name=$log_file_name
-#        read -p "enter the email id:" email_id
-#        email=$email_id
 	read_variable
 	bash $folder_name/apache_log_monitor.sh $file_name $email
 else
