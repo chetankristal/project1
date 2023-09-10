@@ -29,3 +29,16 @@ For the immediate fix, I will utilize the 'find' command to identify files older
 
 Solution:- Now I will use the logrotate utility to implement and manage log files by rotating and compressing them, will keep the log of 90 days on the server and older logs can be uploaded in S3 and we will apply a lifecycle policy to transition logs to Amazon S3 Glacier for long-term storage and Any logs that are older than 7 years will be subject to deletion.
 
+
+# Task2
+
+. Forked the repo 
+    https://github.com/chetankristal/one2onetool.git
+. Created a CI and CD pipeline in Jenkins using pipeline script for two branches staging and release
+    a) Production pipeline scripts :-  https://github.com/chetankristal/project1/blob/main/jenkins_file/prod.jenkinsfile
+        ![image](https://github.com/chetankristal/project1/assets/90678840/e8669cda-9c6b-4e69-9efd-97e9255efc17)
+    b) Staging pipeline scripts :- https://github.com/chetankristal/project1/blob/main/jenkins_file/staging.jenkinsfile
+        ![image](https://github.com/chetankristal/project1/assets/90678840/5b46207b-de25-4480-87f9-35d509f90f80)
+
+
+        ![image](https://github.com/chetankristal/project1/assets/90678840/b48ffb5b-8c89-4d16-9937-26e24106a2b4)
