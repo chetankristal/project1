@@ -41,4 +41,4 @@ Solution:- Now I will use the logrotate utility to implement and manage log file
         ![image](https://github.com/chetankristal/project1/assets/90678840/5b46207b-de25-4480-87f9-35d509f90f80)
 
 
-        ![image](https://github.com/chetankristal/project1/assets/90678840/b48ffb5b-8c89-4d16-9937-26e24106a2b4)
+![image](https://github.com/chetankristal/project1/assets/90678840/37dc84b9-f98f-4d8a-a873-89eb38bbbfc5)
