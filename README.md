@@ -1,4 +1,4 @@
-# Task1
+![image](https://github.com/chetankristal/project1/assets/90678840/daeead23-37ff-416d-8be1-e16e74e7dcf2)# Task1
 Creating this repo with an intent to make Kubernetes easy for begineers. This is a work-in-progress repo.
 
 ## Part1
@@ -40,5 +40,5 @@ Solution:- Now I will use the logrotate utility to implement and manage log file
     b) Staging pipeline scripts :- https://github.com/chetankristal/project1/blob/main/jenkins_file/staging.jenkinsfile
         ![image](https://github.com/chetankristal/project1/assets/90678840/5b46207b-de25-4480-87f9-35d509f90f80)
 
-
+An architecture diagram of CI and CD
 ![image](https://github.com/chetankristal/project1/assets/90678840/37dc84b9-f98f-4d8a-a873-89eb38bbbfc5)
