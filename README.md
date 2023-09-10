@@ -23,6 +23,7 @@ Run the scripts main_scripts.sh with this command:- bash main_scripts.sh and fol
 • On rare occasions, logs up to 3 months old are required for troubleshooting/investigations 
 
 Solution:- We will examine recent log patterns to investigate whether there has been a sudden increase in log volume or not. We will also check that at the application's level have we enabled debug mode to trace certain issues, or if the daily log sizes have grown after the recent deployment. 
+
                         For the immediate fix, I will utilize the 'find' command to identify files older than 90 days, or maybe less. Subsequently, I will upload these files to S3 and promptly remove them from the server.
             
 • Audit requirements dictate that logs are to be kept for at least 7 years • The machine is currently storing 6 months’ worth of logs, and would run out of  storage within the week. Increasing storage is not an option within the next 12  months  
