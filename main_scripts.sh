@@ -34,7 +34,7 @@ elif [[ "$value" == "no" ]]
 then	
         
 	read_variable
-	bash -x $folder_name/apache_log_monitor.sh $file_name $email
+	bash $folder_name/apache_log_monitor.sh $file_name $email
 else
 	echo "exiting"
 	exit 1
