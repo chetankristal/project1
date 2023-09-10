@@ -13,7 +13,9 @@ Instructions on running the scripts for the task
     1) apache_log_monitor.sh
     2) main_scripts.sh
 
-    Run the scripts main_scripts.sh with this command:- bash main_scripts.sh and follow the instructions.
+    Run the scripts main_scripts.sh with this command:- bash main_scripts.sh and follow the instructions. For example check the below
+<img width="1298" alt="image" src="https://github.com/chetankristal/project1/assets/90678840/333f778c-04dc-4cf2-8ec1-efd2240bb41e">
+
 
     
 ## Task2
