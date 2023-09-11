@@ -2,7 +2,7 @@ properties([
     parameters([
         choice(
             choices: ['Questions-test.json' , 'Questions.json'], // Define your choices here
-            description: 'the default value is Questions.json, check the dropdown if you want to select something else:',
+            description: 'the default value is Questions-test.json, check the dropdown if you want to select something else:',
             name: 'data_file', // Replace with your parameter name
             defaultValue: 'Questions-test.json' // Set the default value here
         )
