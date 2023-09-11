@@ -39,11 +39,15 @@ Additionally, we'll implement a log rotation strategy using the logrotate utilit
     https://github.com/chetankristal/one2onetool.git
 . Created a CI and CD pipeline in Jenkins using pipeline script for two branches staging and release
 
-a) Production pipeline scripts :-  https://github.com/chetankristal/project1/blob/main/jenkins_file/prod.jenkinsfile
-   ![image](https://github.com/chetankristal/project1/assets/90678840/e8669cda-9c6b-4e69-9efd-97e9255efc17)
-    
-b) Staging pipeline scripts :- https://github.com/chetankristal/project1/blob/main/jenkins_file/staging.jenkinsfile
-![image](https://github.com/chetankristal/project1/assets/90678840/02879a2d-a2d2-4e7c-b067-7a53da7fa71a)
+a) Production pipeline scripts :-  https://github.com/chetankristal/one2onetool/blob/release/prod.jenkinsfile
+![image](https://github.com/chetankristal/project1/assets/90678840/05c3e7e3-d119-4998-b59e-437d486f518d)
+
+
+
+
+b) Staging pipeline scripts :- https://github.com/chetankristal/one2onetool/blob/staging/staging.jenkinsfile
+![image](https://github.com/chetankristal/project1/assets/90678840/f4e6c25a-5662-4b6e-81dc-9f85d401b54b)
+
 
 
 An architecture diagram of CI and CD
