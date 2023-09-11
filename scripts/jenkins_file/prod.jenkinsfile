@@ -57,12 +57,11 @@ pipeline {
         }
         
         stage('Deploy to Production') {
-            when {
-                branch 'release'
-            }
             steps {
                 // Add deployment steps for staging branch
                 echo "for staging"
+                sh 'ansible-playbook -i  /var/lib/jenkins/project1/scripts/ansible_playbooks/ansible_hosts  /var/lib/jenkins/project1/scripts/ansible_playbooks/deploy-prod.yaml'
+
             }
         }
     }
@@ -93,4 +92,3 @@ pipeline {
         }
     }
 }
-

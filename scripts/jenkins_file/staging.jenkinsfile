@@ -2,7 +2,7 @@ properties([
     parameters([
         choice(
             choices: ['Questions-test.json' , 'Questions.json'], // Define your choices here
-            description: 'the default value is Questions-test.json, check the dropdown if you want to select something else:',
+            description: 'the default value is Questions.json, check the dropdown if you want to select something else:',
             name: 'data_file', // Replace with your parameter name
             defaultValue: 'Questions-test.json' // Set the default value here
         )
@@ -49,20 +49,19 @@ pipeline {
             steps {
                 // Run tests (adjust the test command as needed)
                 sh '''
-                cp -rf /var/lib/jenkins/project1/scripts/Dockerfile .
+                docker system prune -f
+                cp -rf /var/lib/jenkins/scripts/Dockerfile .
                 docker image build -f Dockerfile -t chetan11may/node-app:staging .
                 docker push chetan11may/node-app:staging
                 '''
             }
         }
         
-        stage('Deploy to Production') {
-            when {
-                branch 'staging'
-            }
+        stage('Deploy to staging') {
             steps {
                 // Add deployment steps for staging branch
                 echo "for staging"
+                sh 'ansible-playbook -i  /var/lib/jenkins/project1/scripts/ansible_playbooks/ansible_hosts  /var/lib/jenkins/project1/scripts/ansible_playbooks/deploy-staging.yaml'
             }
         }
     }

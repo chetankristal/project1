@@ -1,0 +1,7 @@
+- hosts: staging 
+  tasks:
+
+    - name: deploying in staging
+      shell: bash deploy_node.sh
+      args:
+        chdir: ~/project1/scripts/ansible_playbooks/files/staging

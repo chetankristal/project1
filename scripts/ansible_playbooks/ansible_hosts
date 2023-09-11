@@ -3,5 +3,5 @@ prod ansible_port=22 ansible_host=10.0.1.89 ansible_ssh_private_key_file=~/.ssh/
 
 
 [staging]
-staging ansible_port=22 ansible_host=10.0.1.89 ansible_ssh_private_key_file=~/.ssh/bastian-keypair.pem ansible_user=ubuntu
+staging ansible_port=22 ansible_host=10.0.1.41 ansible_ssh_private_key_file=~/.ssh/bastian-keypair.pem ansible_user=ubuntu
 

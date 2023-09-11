@@ -1,0 +1,7 @@
+- hosts: prod
+  tasks:
+
+    - name: deploying in prod
+      shell: bash deploy_node.sh
+      args:
+        chdir: ~/project1/scripts/ansible_playbooks/files/prod
