@@ -1,4 +1,4 @@
-![image](https://github.com/chetankristal/project1/assets/90678840/daeead23-37ff-416d-8be1-e16e74e7dcf2)# Task1
+# Task1
 Creating this repo with an intent to make Kubernetes easy for begineers. This is a work-in-progress repo.
 
 ## Part1
