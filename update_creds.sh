@@ -1,8 +1,10 @@
 #!/bin/bash
 
+script_dir=$1
+
 rm -rf /tmp/ssmtp.conf.template
 
-cp ssmtp.conf.template /tmp/ssmtp.conf.template
+cp $script_dir/ssmtp.conf.template /tmp/ssmtp.conf.template
 
 secret_manager_arn=arn:aws:secretsmanager:ap-south-1:431350620989:secret:smtp_credentials-Zn2mms
 
