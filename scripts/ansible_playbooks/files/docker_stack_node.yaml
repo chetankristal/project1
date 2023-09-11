@@ -1,0 +1,19 @@
+version: '3.7' #Version of YML file
+
+services:
+
+    nodejs-app:
+        image: chetan11may/node-app:staging
+        deploy:
+            replicas: 2
+            restart_policy:
+                condition: on-failure
+        networks:
+          - overlay
+
+
+networks:
+  overlay:
+    external: true
+    name: my-overlay
+
