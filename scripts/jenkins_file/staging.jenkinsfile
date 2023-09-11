@@ -50,7 +50,7 @@ pipeline {
                 // Run tests (adjust the test command as needed)
                 sh '''
                 cp -rf /var/lib/jenkins/project1/scripts/Dockerfile .
-                docker image build -f Dockerfile -t chetan11may/node-app:prod .
+                docker image build -f Dockerfile -t chetan11may/node-app:staging .
                 docker push chetan11may/node-app:staging
                 '''
             }
