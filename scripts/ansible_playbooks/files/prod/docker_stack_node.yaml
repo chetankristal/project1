@@ -2,13 +2,13 @@ version: '3.7' #Version of YML file
 
 services:
   nodejs-app:
-    image: chetan11may/node-app:staging 
+    image: chetan11may/node-app:prod 
     deploy:
       replicas: 1
       restart_policy:
         condition: on-failure
     ports:
-      - 8081:3000
+      - 8085:3000
     networks:
       - overlay
 
