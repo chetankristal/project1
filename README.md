@@ -38,11 +38,13 @@ Solution:- Now I will use the logrotate utility to implement and manage log file
 
     
     
-        a) Production pipeline scripts :-  https://github.com/chetankristal/project1/blob/main/jenkins_file/prod.jenkinsfile
-        ![image](https://github.com/chetankristal/project1/assets/90678840/e8669cda-9c6b-4e69-9efd-97e9255efc17)
+    a) Production pipeline scripts :-  https://github.com/chetankristal/project1/blob/main/jenkins_file/prod.jenkinsfile
+    ![image](https://github.com/chetankristal/project1/assets/90678840/e8669cda-9c6b-4e69-9efd-97e9255efc17)
     
-        b) Staging pipeline scripts :- https://github.com/chetankristal/project1/blob/main/jenkins_file/staging.jenkinsfile
-        ![image](https://github.com/chetankristal/project1/assets/90678840/5b46207b-de25-4480-87f9-35d509f90f80)
+    b) Staging pipeline scripts :- https://github.com/chetankristal/project1/blob/main/jenkins_file/staging.jenkinsfile
+    ![image](https://github.com/chetankristal/project1/assets/90678840/5b46207b-de25-4480-87f9-35d509f90f80)
 
-                            ###An architecture diagram of CI and CD
-![image](https://github.com/chetankristal/project1/assets/90678840/37dc84b9-f98f-4d8a-a873-89eb38bbbfc5)
+
+###An architecture diagram of CI and CD
+
+![iage](https://github.com/chetankristal/project1/assets/90678840/37dc84b9-f98f-4d8a-a873-89eb38bbbfc5)
