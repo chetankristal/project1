@@ -1,5 +1,4 @@
 # Task1
-Creating this repo with an intent to make Kubernetes easy for begineers. This is a work-in-progress repo.
 
 ## Part1
 Instructions on running the scripts for the task 
