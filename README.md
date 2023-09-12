@@ -4,14 +4,14 @@ Creating this repo with an intent to make Kubernetes easy for begineers. This is
 ## Part1
 Instructions on running the scripts for the task 
 
-    checkout the GitHub code:-
+    checkout the GitHub code in home directory:-
     git clone https://github.com/chetankristal/project1.git
     
 
 There are mainly two scripts
   1) apache_log_monitor.sh
   2) main_scripts.sh
-  3) 
+  3) update_creds.sh
 
 Run the scripts main_scripts.sh with this command:- bash main_scripts.sh and follow the instructions. For example, check the below
 <img width="1298" alt="image" src="https://github.com/chetankristal/project1/assets/90678840/333f778c-04dc-4cf2-8ec1-efd2240bb41e">
